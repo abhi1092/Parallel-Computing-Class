@@ -1,6 +1,6 @@
 # Parallel-Computing-Class
 
-This is Repositoryu for my Parallel Computing Class. \n
+This is Repositoryu for my Parallel Computing Class.
 Assignment 1 Linked List
 Assignment 2 Extracting parallelsim: Dependncy Graph, parallel algorithm for Prefix sum, Find first.
 Assignment 3 Pthreads: Numerical Integration, Strassen algorithm Mock version, Loop scheduler, Task Scheduler using pthreads
