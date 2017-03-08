@@ -19,7 +19,7 @@ int main(int argc,char *argv[])
 	arr_size = atoi(argv[1]);
 	numthrds = atoi(argv[2]);
 	mode = atoi(argv[3]);
-	a = (int *)calloc(arr_size,sizeof(int));
+	 a = (int *)calloc(arr_size,sizeof(int));
 	if(a==NULL)
 	{
 		printf("Error in allocating memory. Exiting..");
@@ -60,7 +60,7 @@ int find_first(int *a,int n,int numthrds,int target)
 	omp_set_dynamic(0);
 	omp_set_num_threads(numthrds);
 #pragma omp parallel for 
-	for(i=1;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		if(a[i]==target)
 		{
@@ -71,7 +71,7 @@ int find_first(int *a,int n,int numthrds,int target)
 	
 	result = c[0];
 
-#pragma omp parallel for reduction(min:index)
+#pragma omp parallel for reduction(min:result)
 	for(i=0;i<n;i++)
 	{
 		if(c[i]<result)
